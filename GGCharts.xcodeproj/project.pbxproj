@@ -53,7 +53,6 @@
 		2B3CFEED1F75F5740097A869 /* BarAnimationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CFE6E1F75F5740097A869 /* BarAnimationsManager.m */; };
 		2B3CFEEE1F75F5740097A869 /* LineAnimationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CFE701F75F5740097A869 /* LineAnimationsManager.m */; };
 		2B3CFEEF1F75F5740097A869 /* PieAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CFE721F75F5740097A869 /* PieAnimationManager.m */; };
-		2B3CFEF91F75F5740097A869 /* BaseScaler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CFEA21F75F5740097A869 /* BaseScaler.m */; };
 		2B3CFEFA1F75F5740097A869 /* BaseShapeScaler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CFEA41F75F5740097A869 /* BaseShapeScaler.m */; };
 		2B3CFEFB1F75F5740097A869 /* DBarScaler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CFEA61F75F5740097A869 /* DBarScaler.m */; };
 		2B3CFEFC1F75F5740097A869 /* DKLineScaler.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B3CFEA81F75F5740097A869 /* DKLineScaler.m */; };
@@ -272,8 +271,6 @@
 		2B3CFE991F75F5740097A869 /* PieDrawAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieDrawAbstract.h; sourceTree = "<group>"; };
 		2B3CFE9A1F75F5740097A869 /* PieInnerLableAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieInnerLableAbstract.h; sourceTree = "<group>"; };
 		2B3CFE9B1F75F5740097A869 /* PieOutSideLableAbstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieOutSideLableAbstract.h; sourceTree = "<group>"; };
-		2B3CFEA11F75F5740097A869 /* BaseScaler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseScaler.h; sourceTree = "<group>"; };
-		2B3CFEA21F75F5740097A869 /* BaseScaler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseScaler.m; sourceTree = "<group>"; };
 		2B3CFEA31F75F5740097A869 /* BaseShapeScaler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseShapeScaler.h; sourceTree = "<group>"; };
 		2B3CFEA41F75F5740097A869 /* BaseShapeScaler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseShapeScaler.m; sourceTree = "<group>"; };
 		2B3CFEA51F75F5740097A869 /* DBarScaler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBarScaler.h; sourceTree = "<group>"; };
@@ -519,11 +516,8 @@
 			children = (
 				2B5DE6331F00BD0100B40676 /* BaseModel.h */,
 				2B5DE6341F00BD0100B40676 /* BaseModel.m */,
-				2B970C161FA3370A00FA8B90 /* ProgressDemo */,
-				2B970C121FA3370500FA8B90 /* RadarDemo */,
 				2B970C021FA3370000FA8B90 /* LineBarDemo */,
 				2B68E96A1F204D93005D779A /* StockDemo */,
-				2B6974131F7A57A2002FF414 /* PieDemo */,
 			);
 			path = GGChartDemo;
 			sourceTree = "<group>";
@@ -777,20 +771,11 @@
 		2B3CFEA01F75F5740097A869 /* DataScaler */ = {
 			isa = PBXGroup;
 			children = (
-				2B3CFEA11F75F5740097A869 /* BaseScaler.h */,
-				2B3CFEA21F75F5740097A869 /* BaseScaler.m */,
-				2B3CFEA31F75F5740097A869 /* BaseShapeScaler.h */,
-				2B3CFEA41F75F5740097A869 /* BaseShapeScaler.m */,
-				2B3CFEA51F75F5740097A869 /* DBarScaler.h */,
-				2B3CFEA61F75F5740097A869 /* DBarScaler.m */,
-				2B3CFEA71F75F5740097A869 /* DKLineScaler.h */,
-				2B3CFEA81F75F5740097A869 /* DKLineScaler.m */,
-				2B3CFEA91F75F5740097A869 /* DLineScaler.h */,
-				2B3CFEAA1F75F5740097A869 /* DLineScaler.m */,
-				2B3CFEAB1F75F5740097A869 /* DPieScaler.h */,
-				2B3CFEAC1F75F5740097A869 /* DPieScaler.m */,
-				2B3CFEAD1F75F5740097A869 /* DRadarScaler.h */,
-				2B3CFEAE1F75F5740097A869 /* DRadarScaler.m */,
+				499ECC4922D6FCE400984E90 /* LineScaler */,
+				499ECC4A22D6FEDE00984E90 /* BarScaler */,
+				499ECC4622D6FCA400984E90 /* PieScaler */,
+				499ECC4822D6FCD400984E90 /* KLineScaler */,
+				499ECC4522D6FC3E00984E90 /* RadarScaler */,
 			);
 			path = DataScaler;
 			sourceTree = "<group>";
@@ -1148,16 +1133,19 @@
 		2B970C021FA3370000FA8B90 /* LineBarDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2B970C031FA3370000FA8B90 /* EpsLineViewController.h */,
-				2B970C041FA3370000FA8B90 /* EpsLineViewController.m */,
 				2B970C051FA3370000FA8B90 /* IOBarChartViewController.h */,
 				2B970C061FA3370000FA8B90 /* IOBarChartViewController.m */,
 				2B970C071FA3370000FA8B90 /* LineBarChartViewController.h */,
 				2B970C081FA3370000FA8B90 /* LineBarChartViewController.m */,
-				2B970C091FA3370000FA8B90 /* LineViewController.h */,
-				2B970C0A1FA3370000FA8B90 /* LineViewController.m */,
+				2B6974131F7A57A2002FF414 /* PieDemo */,
 				2B970C0B1FA3370000FA8B90 /* MDLineViewController.h */,
 				2B970C0C1FA3370000FA8B90 /* MDLineViewController.m */,
+				2B970C091FA3370000FA8B90 /* LineViewController.h */,
+				2B970C0A1FA3370000FA8B90 /* LineViewController.m */,
+				2B970C031FA3370000FA8B90 /* EpsLineViewController.h */,
+				2B970C041FA3370000FA8B90 /* EpsLineViewController.m */,
+				2B970C121FA3370500FA8B90 /* RadarDemo */,
+				2B970C161FA3370A00FA8B90 /* ProgressDemo */,
 			);
 			path = LineBarDemo;
 			sourceTree = "<group>";
@@ -1260,6 +1248,53 @@
 			path = GGCharts;
 			sourceTree = "<group>";
 		};
+		499ECC4522D6FC3E00984E90 /* RadarScaler */ = {
+			isa = PBXGroup;
+			children = (
+				2B3CFEAD1F75F5740097A869 /* DRadarScaler.h */,
+				2B3CFEAE1F75F5740097A869 /* DRadarScaler.m */,
+			);
+			path = RadarScaler;
+			sourceTree = "<group>";
+		};
+		499ECC4622D6FCA400984E90 /* PieScaler */ = {
+			isa = PBXGroup;
+			children = (
+				2B3CFEAB1F75F5740097A869 /* DPieScaler.h */,
+				2B3CFEAC1F75F5740097A869 /* DPieScaler.m */,
+			);
+			path = PieScaler;
+			sourceTree = "<group>";
+		};
+		499ECC4822D6FCD400984E90 /* KLineScaler */ = {
+			isa = PBXGroup;
+			children = (
+				2B3CFEA31F75F5740097A869 /* BaseShapeScaler.h */,
+				2B3CFEA41F75F5740097A869 /* BaseShapeScaler.m */,
+				2B3CFEA71F75F5740097A869 /* DKLineScaler.h */,
+				2B3CFEA81F75F5740097A869 /* DKLineScaler.m */,
+			);
+			path = KLineScaler;
+			sourceTree = "<group>";
+		};
+		499ECC4922D6FCE400984E90 /* LineScaler */ = {
+			isa = PBXGroup;
+			children = (
+				2B3CFEA91F75F5740097A869 /* DLineScaler.h */,
+				2B3CFEAA1F75F5740097A869 /* DLineScaler.m */,
+			);
+			path = LineScaler;
+			sourceTree = "<group>";
+		};
+		499ECC4A22D6FEDE00984E90 /* BarScaler */ = {
+			isa = PBXGroup;
+			children = (
+				2B3CFEA51F75F5740097A869 /* DBarScaler.h */,
+				2B3CFEA61F75F5740097A869 /* DBarScaler.m */,
+			);
+			path = BarScaler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1300,6 +1335,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -1350,7 +1386,6 @@
 				2B773FDC1F15F43100B2BE59 /* BOLLLayer.m in Sources */,
 				2B2722AD1F0F603600E4A295 /* KLineIndexManager.m in Sources */,
 				2B970C151FA3370500FA8B90 /* RadarViewController.m in Sources */,
-				2B3CFEF91F75F5740097A869 /* BaseScaler.m in Sources */,
 				2B2722B71F0F694400E4A295 /* MALayer.m in Sources */,
 				2B3CFE591F75F4F80097A869 /* lopcodes.c in Sources */,
 				2B3CFE521F75F4F80097A869 /* linit.c in Sources */,

@@ -29,17 +29,17 @@
     self.title = @"IOBarChart";
     
     _barData = [[BarData alloc] init];
-    _barData.barWidth = GG_SIZE_CONVERT(25);
+    _barData.barWidth = GG_SIZE_CONVERT(20);
     _barData.roundNumber = @0;
     _barData.dataAry = @[@-2225.6, @-2563.1, @531.4, @839.4, @-897.0, @1500];
-    
     _barData.dataFormatter = @"%.2f";
     _barData.stringColor = [UIColor blackColor];
     _barData.stringFont = [UIFont systemFontOfSize:GG_SIZE_CONVERT(11)];
     
+    
     _barDataSet = [[BarDataSet alloc] init];
     _barDataSet.barAry = @[_barData];
-    _barDataSet.lineBarMode = LineBarDrawParallel;
+    _barDataSet.lineBarMode = LineBarDrawCenter;
     _barDataSet.midLineWidth = .5f;
     _barDataSet.midLineColor = RGB(140, 154, 163);
     _barDataSet.updateNeedAnimation = YES;
@@ -49,21 +49,20 @@
     _barDataSet.gridConfig.bottomLableAxis.drawStringAxisCenter = YES;
     
     [_barDataSet setBarColorsAtIndexPath:^UIColor *(NSIndexPath * index, NSNumber * number) {
-        
         return number.floatValue > 0 ? RGB(241, 73, 81) : RGB(30, 191, 97);
     }];
-    
     [_barDataSet setStringColorForValue:^UIColor *(CGFloat value) {
-        
         return value > 0 ? RGB(241, 73, 81) : RGB(30, 191, 97);
     }];
     
     _barChart = [[BarChart alloc] initWithFrame:CGRectMake(20, 100, [UIScreen mainScreen].bounds.size.width - 40, 200)];
     _barChart.barDataSet = _barDataSet;
-    [self.view addSubview:_barChart];
-    
     [_barChart drawBarChart];
     [_barChart startAnimationsWithType:BarAnimationRiseType duration:.5f];
+    [self.view addSubview:_barChart];
+    
+    
+    
     
     UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setBackgroundColor:[UIColor redColor]];

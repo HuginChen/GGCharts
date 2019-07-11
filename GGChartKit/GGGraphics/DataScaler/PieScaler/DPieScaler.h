@@ -5,11 +5,15 @@
 //  Created by _ | Durex on 2017/7/1.
 //  Copyright © 2017年 I really is a farmer. All rights reserved.
 //
-
-#import "BaseScaler.h"
+ 
 #import "GGPie.h"
 
-@interface DPieScaler : BaseScaler
+@interface DPieScaler : NSObject
+
+/**
+ * 绘制区域
+ */
+@property (nonatomic, assign) CGRect rect;
 
 /**
  * 扇形图数据

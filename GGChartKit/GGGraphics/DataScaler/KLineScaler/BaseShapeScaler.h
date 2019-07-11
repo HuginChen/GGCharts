@@ -6,9 +6,12 @@
 //  Copyright © 2017年 I really is a farmer. All rights reserved.
 //
 
-#import "BaseScaler.h"
+@interface BaseShapeScaler : NSObject
 
-@interface BaseShapeScaler : BaseScaler
+/**
+ * 绘制区域
+ */
+@property (nonatomic, assign) CGRect rect;
 
 /**
  * 每一个模型的宽度

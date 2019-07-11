@@ -42,15 +42,10 @@
     CGPoint velocity = [recognizer locationInView:self];
     
     if (recognizer.state == UIGestureRecognizerStateEnded) {
-        
         [self longPressGestureRecognizerStateEnded:velocity];
-    }
-    else if (recognizer.state == UIGestureRecognizerStateBegan) {
-        
+    } else if (recognizer.state == UIGestureRecognizerStateBegan) {
         [self longPressGestureRecognizerStateBegan:velocity];
-    }
-    else if (recognizer.state == UIGestureRecognizerStateChanged) {
-        
+    } else if (recognizer.state == UIGestureRecognizerStateChanged) {
         [self longPressGestureRecognizerStateChanged:velocity];
     }
 }
@@ -60,29 +55,21 @@
  *
  * @param point 视图响应的点
  */
-- (void)longPressGestureRecognizerStateBegan:(CGPoint)point
-{
-    
-}
+- (void)longPressGestureRecognizerStateBegan:(CGPoint)point {}
 
 /**
  * 即将结束响应长按手势
  *
  * @param point 视图响应的点
  */
-- (void)longPressGestureRecognizerStateEnded:(CGPoint)point
-{
-
-}
+- (void)longPressGestureRecognizerStateEnded:(CGPoint)point {}
 
 /**
  * 响应长按手势点变换
  *
  * @param point 视图响应的点
  */
-- (void)longPressGestureRecognizerStateChanged:(CGPoint)point
-{
+- (void)longPressGestureRecognizerStateChanged:(CGPoint)point {}
 
-}
 
 @end

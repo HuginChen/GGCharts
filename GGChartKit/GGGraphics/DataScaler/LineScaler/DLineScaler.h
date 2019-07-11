@@ -5,11 +5,15 @@
 //  Created by _ | Durex on 17/6/22.
 //  Copyright © 2017年 I really is a farmer. All rights reserved.
 //
-
-#import "BaseScaler.h"
+ 
 #import "GGChartGeometry.h"
 
-@interface DLineScaler : BaseScaler
+@interface DLineScaler : NSObject
+
+/**
+ * 绘制区域
+ */
+@property (nonatomic, assign) CGRect rect;
 
 /**
  * 区域内最大值

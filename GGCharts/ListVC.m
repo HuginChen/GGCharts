@@ -74,7 +74,12 @@ _Pragma("clang diagnostic pop") \
 
 - (NSArray *)rowAry
 {
-    return @[@[@"IOBarChartView", @"LineBarChartView", @"NTPieView", @"PieDemoChartViewController", @"MDLineView", @"LineChartView", @"LineChartView2", @"RadarViewController", @"ProgressViewController"], @[@"TimeChartView", @"KLineChartView"]];
+    return @[@[@"IOBarChartView", @"LineBarChartView",
+               @"NTPieView", @"PieDemoChartViewController",
+               @"MDLineView", @"LineChartView",
+               @"EpsLineViewController", @"RadarViewController",
+               @"ProgressViewController"],
+             @[@"TimeChartView", @"KLineChartView"]];
 }
 
 #pragma mark - tableView Delegate && DataSource
@@ -147,7 +152,7 @@ _Pragma("clang diagnostic pop") \
     
         [self.navigationController pushViewController:[LineViewController new] animated:NO];
     }
-    else if ([selectStr isEqualToString:@"LineChartView2"]) {
+    else if ([selectStr isEqualToString:@"EpsLineViewController"]) {
     
         [self.navigationController pushViewController:[EpsLineViewController new] animated:NO];
     }

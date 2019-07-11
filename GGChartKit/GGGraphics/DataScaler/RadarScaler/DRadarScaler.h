@@ -5,8 +5,7 @@
 //  Created by _ | Durex on 17/8/3.
 //  Copyright © 2017年 I really is a farmer. All rights reserved.
 //
-
-#import <Foundation/Foundation.h>
+ 
 #import "GGChartGeometry.h"
 
 @interface DRadarScaler : NSObject
